@@ -4,10 +4,10 @@ import (
 	"log"
 	"net"
 
-	"github.com/anilmisirlioglu/f1-telemetry-go/internal/event"
-	"github.com/anilmisirlioglu/f1-telemetry-go/internal/udp"
-	"github.com/anilmisirlioglu/f1-telemetry-go/pkg/env"
-	"github.com/anilmisirlioglu/f1-telemetry-go/pkg/packets"
+	"github.com/orionowy/f1-telemetry-go/internal/event"
+	"github.com/orionowy/f1-telemetry-go/internal/udp"
+	"github.com/orionowy/f1-telemetry-go/pkg/env"
+	"github.com/orionowy/f1-telemetry-go/pkg/packets"
 )
 
 type Client struct {
@@ -18,7 +18,7 @@ type Client struct {
 
 // If you are not able to receive the packages from the game
 // try using 0.0.0.0 as your localhost address
-const localhost = "127.0.0.1"
+const localhost = "0.0.0.0"
 
 func NewClient() (*Client, error) {
 	// default F1 game UDP port is 20777
